@@ -1,27 +1,23 @@
-import './App.css';
+import React, { useState } from 'react';
+import "./App.css"
 
 function App() {
+  const [randomNumber, setRandomNumber] = useState(null);
+  const[dela,setDela]=useState(0);
+  const[panala,setPanala]=useState(100);
+
+  const generateRandomNumber = () => {
+    const randomNum = Math.floor(Math.random() * 100) + 1;
+    setRandomNumber(randomNum);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div className='App'>
+        <input placeholder='de la ' value={dela} onChange={(e)=>setDela(e.target.value)}></input>
+        <input placeholder='pana la ' value={panala} onChange={(e)=>setDela(e.target.value)}></input>
+      <h1 className='titlu'>Random Number Generator</h1>
+      <button onClick={generateRandomNumber}>Generate Random Number</button>
+      {randomNumber !== null && <p>Generated Random Number: {randomNumber}</p>}
     </div>
   );
 }
