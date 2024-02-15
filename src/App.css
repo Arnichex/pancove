@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #ff6200;
+  background-color: #000000;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@ h1 {
 }
 
 button {
-  background-color: #ff8c00; /* Orange color for the button */
+  background-color: #ff7b00; /* Orange color for the button */
   color: #fff; /* White text color */
   padding: 10px 20px;
   font-size: 16px;
@@ -35,7 +35,7 @@ button:hover {
 }
 
 p {
-  color: #0a0a0a; /* Orange color for the generated number */
+  color: #d65d00; /* Orange color for the generated number */
   font-size: 20px;
   margin-top: 20px;
 }
