@@ -13,9 +13,12 @@ function App() {
 
   return (
     <div className='App'>
+    <img className='Fundal' src='../public/fundal.jpg'/>
       <h1 className='titlu'>Random Number Generator</h1>
+       <div>
         <input placeholder='de la ' value={dela} onChange={(e)=>setDela(e.target.value)}></input>
         <input placeholder='pana la ' value={panala} onChange={(e)=>setPanala(e.target.value)}></input>
+      </div>
       <br></br>
       <button onClick={generateRandomNumber}>Generate Random Number</button>
       {randomNumber !== null && <p>Generated Random Number: {randomNumber}</p>}
